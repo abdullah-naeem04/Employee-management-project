@@ -28,13 +28,13 @@ const App = () => {
       setUser("admin");
     } else if (userData) {
       const employee = userData.find(
-        (e) => email == e.email && password == e.password
+        (e) => email == e.email && password == e.password,
       );
       if (employee) {
         setLoggedInUserData(employee);
         localStorage.setItem(
           "loggedInUser",
-          JSON.stringify({ role: "employee", data: employee })
+          JSON.stringify({ role: "employee", data: employee }),
         );
         setUser("employee");
       }
